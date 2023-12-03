@@ -1,0 +1,528 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  }
+
+/* Navigation Section */
+nav {
+  height: 85px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fdcc04;
+  padding: 0px calc((100vw - 1300px) / 2);
+}
+
+nav a {
+  text-decoration: none; /* Remove the underline for all anchor elements */
+}
+
+/* Logo Style */
+nav .logo {
+  color: black;
+  font-size: 48px;
+  font-weight: bold;
+  font-style: oblique;
+  padding: 32px;
+  text-decoration: none; 
+  cursor: pointer; /* Add a cursor pointer to indicate it's clickable for the logo */
+}
+
+nav .nav-items {
+  flex: 1; /* nav items nearer to logo*/
+}
+
+nav .nav-items ul {
+  display: flex;
+  white-space: nowrap; /* Prevent line breaks */
+}
+
+nav .nav-items li {
+  margin-right: 20px; 
+}
+
+nav .nav-items ul li {
+  display: inline-block;
+  padding: 16px;
+  position: relative;
+}
+
+nav .nav-items ul li a {
+  color: black;
+  text-decoration: none; /* Remove black underline */
+  font-size: 20px;
+}
+
+nav .nav-items ul li::after {
+  content: '';
+  width: 0%;
+  margin: auto;
+  height: 2px;
+  background: #fff;
+  transition: 0.5s;
+  display: block;
+}
+
+nav .nav-items ul li:hover::after {
+  width: 100%; /* White underline when hover cover fully */
+}
+
+/* Highlight active page in navigation. For e.g, when the user
+is at "About Us" Page, the "About Us" in the navigation section will be highlighted white.*/
+nav .nav-items ul li:nth-child(1) a {
+  color: white; 
+  text-decoration: none; /* Remove the underline */
+}
+
+/* Get Started Button Styles */
+#but a.button-link {
+  background-color: #fff;
+  color: black;
+  font-size: 21px;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-left: auto;
+  margin-right: 20px;
+  text-decoration: none; 
+  display: inline-block; 
+}
+
+#but a.button-link:hover {
+  background-color: #ddd;
+  transition: 0.5s;
+}
+
+/* About Us Section */
+#intro{
+  margin-bottom: 20px;
+}
+
+.intro-heading {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin: 50px auto;
+}
+
+.intro-heading h1 {
+  font-size: 50px;
+  color: black;
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.intro-heading h1::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 4px;
+  display: block;
+  margin: 0;
+  background-color: #fdcc04;
+  transition: 0.5s ease; /* Add transition property for the underline */
+} 
+
+.intro-heading p {
+  font-size: 23px;
+  margin-bottom: 40px;
+}
+
+.container {
+  width: 90%;
+  margin: 0 auto;
+  padding: 10px 20px;
+  margin-bottom: 100px;
+}
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}  
+
+.img-container {
+  flex: 1;
+  margin-right: 40px;
+}
+
+.img-container img {
+  width: 700px;
+  height: 450px;
+  display: block;
+  transition: 0.5s ease;
+}
+
+.content {
+  flex: 1;
+  margin-left: 40px;
+}
+
+.content h2 {
+  font-size: 25px;
+  margin-bottom: 35px;
+}
+
+.content p {
+  font-size: 18px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.content .read-more-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #efbf00;
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+  border-radius: 30px;
+  margin-top: 15px;
+  transition: 0.3s ease;
+}
+
+/* Image will be enlarged on hover effect */
+.img-container:hover img {
+  transform: scale(1.1); 
+}
+
+/* Read More Button hover effect */
+.content .read-more-btn:hover {
+  background-color: #d4a300; 
+}
+
+/* More About Us Section */
+#more-abt-us {
+  width: 90%;
+  margin: 0 auto;
+  padding: 30px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+}
+
+.mission,
+.vision, .values {
+  flex: 1;
+  text-align: center;
+  border: 1px solid #ddd; 
+  padding: 20px;
+  border-radius: 15px; 
+  margin: 20px;
+  transition: 0.3s ease;
+}
+
+.mission:hover,
+.vision:hover,
+.values:hover {
+  transform: scale(1.06); /* Enlarge the box on hover */
+}
+
+.mission h2,
+.vision h2, .values h2 {
+  font-size: 30px;
+  color: #000;
+  margin-bottom: 25px;
+}
+
+.mission p, .vision p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+.mission i, .vision i, .values i {
+  font-size: 50px; 
+  margin-bottom: 20px; 
+}
+
+.values ul {
+  list-style: none;
+  padding: 0;
+}
+
+.values li {
+  font-size: 18px;
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.values li span {
+  font-weight: bold;
+  color: #fdcc04;
+  margin-right: 5px;
+}
+
+/* Review and Testimonials Section */
+#testimonial {
+  text-align: center;
+  padding-top: 70px;
+  padding-bottom: 70px;
+}
+
+.pre-testi h1 {
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.pre-testi p {
+  font-size: 20px;
+  margin-bottom: 50px;
+}
+
+.test-grid {
+  width: 100%;
+  display: grid;
+  padding-left: 50px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 32px;
+  text-align: center;
+}
+
+.cont {
+  padding: 32px;
+  display: grid;
+  max-width: 400px;
+  gap: 16px;
+  border-radius: 5px;
+  box-shadow: 5px 5px 30px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+}
+
+.cont i {
+  font-size: 40px;
+}
+
+.cont hr {
+  width: 40px;
+  margin: auto;
+  color: black;
+}
+
+.cont p {
+  font-size: 17px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+
+.cont img {
+  width: 100px;
+  height: 100px;
+  margin: auto;
+  border-radius: 100%; /* make the photo round */
+}
+
+.cont .name {
+  font-size: 14.5px;
+  font-weight: 400;
+}
+
+.star-rating {
+  display: flex;
+  gap: 5px; 
+  justify-content: center; 
+  padding-bottom: 10px;
+}
+
+.star-rating i {
+  font-size: 24px;
+  color: gold;
+}
+
+/* Footer Styles */
+footer {
+  background-color: rgb(140, 82, 140);
+  color: #fff;
+  padding: 40px;
+  text-align: center;
+}
+
+.foot-cont {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.foot-cont h1{
+  margin-bottom: 5px;
+}
+
+.social-media-icons {
+  margin-bottom: 2px;
+}
+
+.social-media-icons i {
+  font-size: 40px; 
+  margin: 0 10px;
+  padding:40px;
+}
+
+.nav-foot {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.nav-foot ul {
+  list-style: none;
+  display: flex;
+}
+
+.nav-foot li {
+  margin-right: 20px;
+}
+
+.nav-foot a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.5s;
+  padding: 7px;
+}
+
+.nav-foot a:hover {
+  color: #fdcc04; /* Change color on hover */
+}
+
+.Copyright p {
+  margin-top: 100px; /* Adjust the margin-top to create space within the .Copyright paragraph */
+}
+
+/* Button Styles (auto scrolling back to the top button) */
+#back-to-top-btn {
+  display: none;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 40px;
+  height: 40px;
+  font-size: 18px;
+  background-color: #fff;
+  color: #007bff;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  cursor: pointer;
+  outline: none;
+  transition: 0.3s;
+  }
+  
+  #back-to-top-btn:hover {
+  background-color: #007bff;
+  color: #fff;
+  }
+
+  /* ********* Mobile View (max-width:768px) ********* */
+
+  /* Navigation Section */
+  @media (max-width: 768px) {
+    nav .logo {
+      font-size: 24px;
+    }
+    nav .nav-items ul li {
+      padding: 8px;
+    }
+    nav .nav-items ul li a{
+      font-size: 18px;
+    }
+    #but a.button-link {
+      font-size: 14px; 
+      margin-right: 20px;
+    }
+  }
+
+  /* About Us Section */
+  @media screen and (max-width: 768px) {
+    .intro-heading {
+        padding: 0px 20px;
+    }
+
+    .intro-heading h1 {
+        font-size: 36px;
+    }
+
+    .intro-heading p {
+        font-size: 18px;
+        margin-bottom: 0px;
+    }
+
+    .img-container img{
+      max-width: 100%;
+      height: auto;
+    }
+
+    .container {
+        padding: 0px;
+    }
+
+    .about {
+        padding: 20px;
+        flex-direction: column;
+    }
+
+    .img-container {
+        margin-right: 0px;
+        margin-bottom: 20px;
+    }
+
+    .content {
+        padding: 0px;
+    }
+
+    .content p {
+        padding: 0px;
+        font-size: 16px;
+    }
+
+    .content .read-more-btn {
+        font-size: 16px;
+    }
+  }
+
+  /* More About Us Section */
+  @media screen and (max-width: 768px){
+    #more-abt-us {
+      flex-direction: column; 
+      align-items: center; 
+      padding:10px;
+    }
+
+    .mission,
+    .vision,
+    .values {
+      width: 100%; 
+    }
+  }
+
+  /* Reviews and Testimonials Section */
+  @media screen and (max-width: 768px) {
+    .test-grid {
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+      padding-right: 40px;
+    }
+  }
+
+
+
+  /* Scrolling Animation Style*/
+  .scrolling-animation {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: 0.6s;
+  }
+
+  .scrolling-animation.show {
+    opacity: 1;
+    transform: translateY(0);
+  }
