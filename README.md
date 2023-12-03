@@ -1,5 +1,8 @@
 # FED Assignment 1
 
+By Seow Zheng Bin, IT05
+
+
 # WCoMMs Website
 My project involves developing on a telecommunication website for my own fictional company, WCoMMs. The primary objective is to effectively communicate the company's services to the customers. The website aims to be able to attract as many users as possible by showcasing of our various services and plans offered and also win the confidence of our customers regarding of our quality and reliability of the service provided.
  
